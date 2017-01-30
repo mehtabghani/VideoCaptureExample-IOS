@@ -7,40 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		065CFE7F1AC910B3F5C3D767A05844DD /* PBJVisionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBD4F8E614EAA7FA0D1C560E8DA00D9 /* PBJVisionUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		065CFE7F1AC910B3F5C3D767A05844DD /* PBJVisionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF8E8330C4233B3B1EB2D7BBE8865FB /* PBJVisionUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		067EFB6F9C40E222C3B59888539840B1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C49F053CF33EDDB4D60F974090040E /* QuartzCore.framework */; };
-		1A780A8159E4385347A94065641EB38F /* PBJVision.h in Headers */ = {isa = PBXBuildFile; fileRef = EDA48DF1888EDFA8E8D03BB3FFB1A5EB /* PBJVision.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E879149EBAD464755EE1F40655D6382 /* DownPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 34B0B8FFE0ED9686790D8A942B8A32A5 /* DownPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20F6CDDD471E4527C6018BADB134549D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C364B7C4591443B236BEA337B34A2 /* Foundation.framework */; };
+		0BC282F69674AF0FAB2EFB07FE20AE45 /* SDVersion-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAD6447C3F07FCBED9C07D811D9A6C4 /* SDVersion-dummy.m */; };
+		1A780A8159E4385347A94065641EB38F /* PBJVision.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC6F73A3DF4AB8CC1358D6DB74A662A /* PBJVision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E879149EBAD464755EE1F40655D6382 /* DownPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 61222CBF050DE621B1F09BB279A2E012 /* DownPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25CC494ECC816E3E02DCD1DD10E20490 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C364B7C4591443B236BEA337B34A2 /* Foundation.framework */; };
+		2979D623DBD408D8DEBE12A5BCD1592D /* SDiOSVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FB1A570FAAA534655B6FC2C9C7B6EF4 /* SDiOSVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F9B254F9D67774A4C3ADC49BDDDDC72 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30DEF27AC2C590D2ED2BC3E1A1EE512 /* ImageIO.framework */; };
 		376F069C997E966BAC75A10347CE0640 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C27A09245860C8CE40ACAFA34FEC021 /* AVFoundation.framework */; };
 		44EEF64A433186D2DA92962F9E83541C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CCEC0F4E117BC34950537ADFCEB7A9 /* OpenGLES.framework */; };
-		4990087227F70FFD1732427A82B4DD53 /* DownPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE65CEDC9CD1D7ED4D50BD93AB14D48 /* DownPicker.m */; };
-		4DF7DA41F81B7BA608502EC6BBBA2674 /* UIDownPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A4D19CE107BFD6B874A603375E2B6 /* UIDownPicker.m */; };
+		4990087227F70FFD1732427A82B4DD53 /* DownPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E3120E97640D390B70C5E2623F42FD /* DownPicker.m */; };
+		4DF7DA41F81B7BA608502EC6BBBA2674 /* UIDownPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D659BC1630CFD76267B0C9E65127988 /* UIDownPicker.m */; };
 		54654E3510B6B0D1A3ECF701BCED8E82 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCEDBB44343BE1C1DA884EE685E32EA /* MobileCoreServices.framework */; };
-		5558BEC4A8FE7028840FA394F726887E /* PBJVision-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4F085E92CB0AED9400429F14088ADD /* PBJVision-dummy.m */; };
-		5A1180505FD6159F22F450E493CF4C21 /* downArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28B9FD8BF927CFA0D05A94E9E27C241B /* downArrow@2x.png */; };
+		5558BEC4A8FE7028840FA394F726887E /* PBJVision-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBED61BD51ACF8BBFEBF79B6C5D51D9 /* PBJVision-dummy.m */; };
+		5898964E2B5A62BB3706E922F312D15D /* SDiOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DEFB5397847E5FBF84D7435AA431BC /* SDiOSVersion.m */; };
+		5A1180505FD6159F22F450E493CF4C21 /* downArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28CC73BA427D76B1BD14F9C137A5A950 /* downArrow@2x.png */; };
 		5C92F114A260E1D78C65FF6144A1A1D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF036BF32951C528559FB5A40E2EECD7 /* UIKit.framework */; };
-		67C7E44EB214096CFE92F11F8C91029F /* Pods-VIdeoCaptureExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3057977020F1DF458C78353EA182BC61 /* Pods-VIdeoCaptureExample-dummy.m */; };
-		6868F723FA076869355F7B2AB1B9B763 /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0292C4E54BF3591C0A24F95ACAB485 /* PBJVisionUtilities.m */; };
+		6868F723FA076869355F7B2AB1B9B763 /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3E198A2870BAE89975C09AE403726D /* PBJVisionUtilities.m */; };
+		6DEDC303DA6089AD77DEB7D73D2C60C9 /* SDVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EDC5178716CA1B8A8AAD8B97EBE981F /* SDVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		766B46022C0E9E4C644BDBF1F38640B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB6C41A9EBDE44B6AFC8031B3285D2A /* CoreImage.framework */; };
 		78EB77D2FF1DB9B3794D2A19775EEB07 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB4C7FAB31D1F3DC827F584CA593D30 /* CoreMedia.framework */; };
-		7B97F7B79BF5FAE24912459E4FDD24DE /* PBJGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 78699F284104F74007A9624E22FBA962 /* PBJGLProgram.m */; };
-		887F63CBD2DB0ABFDA9646E43B0AE156 /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66071D9700BAA045AF5537559EF08DA7 /* PBJMediaWriter.m */; };
-		9076EAD2AF5E6D9D8D9F659DD1B9ACA1 /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFFB0118E6857C9221E546B60C76E22 /* PBJVision.m */; };
+		7B97F7B79BF5FAE24912459E4FDD24DE /* PBJGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB004F7BEA66F55907800F6E487C70A /* PBJGLProgram.m */; };
+		887F63CBD2DB0ABFDA9646E43B0AE156 /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BC02EB653E1D472AD1FB4906ECE693 /* PBJMediaWriter.m */; };
+		9076EAD2AF5E6D9D8D9F659DD1B9ACA1 /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA7201D6D3F1CCD21952C4DCC9E28E1 /* PBJVision.m */; };
 		910B096C6BCA729EE8A667D101E59070 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE282830D057944F337BC987DE2B60C3 /* CoreVideo.framework */; };
-		C3B2ADD7FA464C666E0B3FF8666392C2 /* downArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F95FDEAFEDDFADD8790135983A5C47 /* downArrow@3x.png */; };
+		A49CF694B93134CC8CCA601A5E90B5DD /* Pods-VIdeoCaptureExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3057977020F1DF458C78353EA182BC61 /* Pods-VIdeoCaptureExample-dummy.m */; };
+		BBA70533A6398F16048FEE0C6132EAF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C364B7C4591443B236BEA337B34A2 /* Foundation.framework */; };
+		C3B2ADD7FA464C666E0B3FF8666392C2 /* downArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EABB78BF0D0BEA02921EAF0407DC2D51 /* downArrow@3x.png */; };
 		CE1FB4A562E42E6BDFA2245BEA011DA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E6CF37A048ED2490461AA5F56F1D9D /* CoreGraphics.framework */; };
-		CF9BBDAABA62DD755799509EB436A656 /* PBJMediaWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 584B60F1200736D5E1A1D90408F3DD75 /* PBJMediaWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1BBBDF118896285D4D931F0DF0A093E /* PBJGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2C41D76DF23581891A60C2CF34D619 /* PBJGLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7C4690AF4714A6BCD8367DF0844721E /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 264D05276C6F61A2E2CBF4E2109255A5 /* downArrow.png */; };
+		CF9BBDAABA62DD755799509EB436A656 /* PBJMediaWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9266B06384212CD43CD57C45840698 /* PBJMediaWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1BBBDF118896285D4D931F0DF0A093E /* PBJGLProgram.h in Headers */ = {isa = PBXBuildFile; fileRef = BC3BBC430B7836D21FC668314C98017E /* PBJGLProgram.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7C4690AF4714A6BCD8367DF0844721E /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DAA5AFDF58F435FCE50B03436D501DF /* downArrow.png */; };
 		DD849B7AFF9D7B448AEDD018606E2ACA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C364B7C4591443B236BEA337B34A2 /* Foundation.framework */; };
-		E42EE4FE1DD37C7DBA95A56041C71B5E /* UIDownPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = EDA4F76CE1A08581F4D66B58BD44EAB5 /* UIDownPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6E1D4D3CAB52D825F18034C1CF5284A /* DownPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D269827EDACD9BFFCCC1CBAC8BCCBB2C /* DownPicker-dummy.m */; };
+		E42EE4FE1DD37C7DBA95A56041C71B5E /* UIDownPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = B955ADCBC8DE97619D31C82F439969F9 /* UIDownPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6E1D4D3CAB52D825F18034C1CF5284A /* DownPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5D44E10B3B0C9789DB3066E314556F /* DownPicker-dummy.m */; };
+		FB3A75F49D4CDB2D5F2A72557D310B3D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6C364B7C4591443B236BEA337B34A2 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0B26AB0AF030C6DDB7462F31DA00413F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DD9921D25EA0C0991BA20E93823D620;
+			remoteInfo = DownPicker;
+		};
+		4262B19C564FEF7387B436284A5AD2F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9508706C8EF63016A651AC34EF4BD23C;
+			remoteInfo = PBJVision;
+		};
+		91A7853FCEA7010D82A9226BDBD27955 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C437532B120C2D49DE73C0DAA84307FF;
+			remoteInfo = SDVersion;
+		};
 		B03FEF97E39F0BD7619626AFE8A7EE93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -48,70 +74,63 @@
 			remoteGlobalIDString = 48AE03F598A6109CB2827ACB2BDF1F65;
 			remoteInfo = "DownPicker-DownPicker";
 		};
-		B59F0313F4FA1655F2BBF836A1649720 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9DD9921D25EA0C0991BA20E93823D620;
-			remoteInfo = DownPicker;
-		};
-		B755182851A37EFE2BFD94B1DC857DF5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9508706C8EF63016A651AC34EF4BD23C;
-			remoteInfo = PBJVision;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		076C8F9872AABD8BBDC1FE12F8123158 /* Shader.vsh */ = {isa = PBXFileReference; includeInIndex = 1; name = Shader.vsh; path = Source/Shaders/Shader.vsh; sourceTree = "<group>"; };
-		0B9A4D19CE107BFD6B874A603375E2B6 /* UIDownPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIDownPicker.m; path = Pod/Classes/UIDownPicker.m; sourceTree = "<group>"; };
+		00E3120E97640D390B70C5E2623F42FD /* DownPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DownPicker.m; path = Pod/Classes/DownPicker.m; sourceTree = "<group>"; };
 		1CCEDBB44343BE1C1DA884EE685E32EA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		1DE65CEDC9CD1D7ED4D50BD93AB14D48 /* DownPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DownPicker.m; path = Pod/Classes/DownPicker.m; sourceTree = "<group>"; };
-		22A706692E8DD9C4701AAB53196A0B8A /* DownPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DownPicker.xcconfig; sourceTree = "<group>"; };
-		264D05276C6F61A2E2CBF4E2109255A5 /* downArrow.png */ = {isa = PBXFileReference; includeInIndex = 1; name = downArrow.png; path = Pod/Assets/downArrow.png; sourceTree = "<group>"; };
-		28B9FD8BF927CFA0D05A94E9E27C241B /* downArrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "downArrow@2x.png"; path = "Pod/Assets/downArrow@2x.png"; sourceTree = "<group>"; };
+		1EC2EE4E8012F254093B91CB0574A99E /* libPods-VIdeoCaptureExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-VIdeoCaptureExample.a"; path = "libPods-VIdeoCaptureExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28CC73BA427D76B1BD14F9C137A5A950 /* downArrow@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "downArrow@2x.png"; path = "Pod/Assets/downArrow@2x.png"; sourceTree = "<group>"; };
+		2A6DBB8F20ED07D1E2E743B0F70AC5F8 /* libPBJVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPBJVision.a; path = libPBJVision.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EDC5178716CA1B8A8AAD8B97EBE981F /* SDVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDVersion.h; path = SDVersion/SDVersion.h; sourceTree = "<group>"; };
 		3057977020F1DF458C78353EA182BC61 /* Pods-VIdeoCaptureExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VIdeoCaptureExample-dummy.m"; sourceTree = "<group>"; };
-		34B0B8FFE0ED9686790D8A942B8A32A5 /* DownPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DownPicker.h; path = Pod/Classes/DownPicker.h; sourceTree = "<group>"; };
-		36180EC9B850E37F980994A16F902615 /* libPBJVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPBJVision.a; path = libPBJVision.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3172092DF4046C48130571B79FB65F09 /* Shader.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = Shader.fsh; path = Source/Shaders/Shader.fsh; sourceTree = "<group>"; };
+		3CB004F7BEA66F55907800F6E487C70A /* PBJGLProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJGLProgram.m; path = Source/PBJGLProgram.m; sourceTree = "<group>"; };
 		3D256C20342840EEBA52DD57E181998D /* Pods-VIdeoCaptureExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VIdeoCaptureExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		3F2C41D76DF23581891A60C2CF34D619 /* PBJGLProgram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJGLProgram.h; path = Source/PBJGLProgram.h; sourceTree = "<group>"; };
+		40D4249D41BC3AEC8DD22F13C3600D5E /* SDVersion.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDVersion.xcconfig; sourceTree = "<group>"; };
 		4B5C2EE68E64AFAD1582017C6774A326 /* Pods-VIdeoCaptureExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VIdeoCaptureExample-frameworks.sh"; sourceTree = "<group>"; };
-		4BBD4F8E614EAA7FA0D1C560E8DA00D9 /* PBJVisionUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVisionUtilities.h; path = Source/PBJVisionUtilities.h; sourceTree = "<group>"; };
-		55BCB37397FC1DF66D0284DBD237A8A4 /* libPods-VIdeoCaptureExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-VIdeoCaptureExample.a"; path = "libPods-VIdeoCaptureExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		584B60F1200736D5E1A1D90408F3DD75 /* PBJMediaWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJMediaWriter.h; path = Source/PBJMediaWriter.h; sourceTree = "<group>"; };
+		517F42C121B79ABD86C15849F1BF9EF4 /* Shader.vsh */ = {isa = PBXFileReference; includeInIndex = 1; name = Shader.vsh; path = Source/Shaders/Shader.vsh; sourceTree = "<group>"; };
+		5658EF0449ACABCBFF2EBE0FEEC2D496 /* libSDVersion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDVersion.a; path = libSDVersion.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E6CF37A048ED2490461AA5F56F1D9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		5C6C364B7C4591443B236BEA337B34A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		66071D9700BAA045AF5537559EF08DA7 /* PBJMediaWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJMediaWriter.m; path = Source/PBJMediaWriter.m; sourceTree = "<group>"; };
+		5DAA5AFDF58F435FCE50B03436D501DF /* downArrow.png */ = {isa = PBXFileReference; includeInIndex = 1; name = downArrow.png; path = Pod/Assets/downArrow.png; sourceTree = "<group>"; };
+		61222CBF050DE621B1F09BB279A2E012 /* DownPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DownPicker.h; path = Pod/Classes/DownPicker.h; sourceTree = "<group>"; };
 		67C49F053CF33EDDB4D60F974090040E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		6D198776B7655D17A54E758F7BD37AC7 /* Shader.fsh */ = {isa = PBXFileReference; includeInIndex = 1; name = Shader.fsh; path = Source/Shaders/Shader.fsh; sourceTree = "<group>"; };
-		78699F284104F74007A9624E22FBA962 /* PBJGLProgram.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJGLProgram.m; path = Source/PBJGLProgram.m; sourceTree = "<group>"; };
-		7D491F9007D7E7A7BE422C2C9EA462A1 /* libDownPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDownPicker.a; path = libDownPicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B9266B06384212CD43CD57C45840698 /* PBJMediaWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJMediaWriter.h; path = Source/PBJMediaWriter.h; sourceTree = "<group>"; };
+		7BBED61BD51ACF8BBFEBF79B6C5D51D9 /* PBJVision-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVision-dummy.m"; sourceTree = "<group>"; };
+		7E3E198A2870BAE89975C09AE403726D /* PBJVisionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVisionUtilities.m; path = Source/PBJVisionUtilities.m; sourceTree = "<group>"; };
 		846C7C3B3888573C827D33453FA5C529 /* Pods-VIdeoCaptureExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VIdeoCaptureExample.debug.xcconfig"; sourceTree = "<group>"; };
-		85A91A112CC3320855C55A69952CC677 /* ResourceBundle-DownPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-DownPicker-Info.plist"; sourceTree = "<group>"; };
-		88EBA9297582C94D6495E4F47B9D9E78 /* PBJVision-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVision-prefix.pch"; sourceTree = "<group>"; };
 		8C27A09245860C8CE40ACAFA34FEC021 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		8D659BC1630CFD76267B0C9E65127988 /* UIDownPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIDownPicker.m; path = Pod/Classes/UIDownPicker.m; sourceTree = "<group>"; };
 		8E50E5BD8A46C8C4FBB31FE11BBE4880 /* Pods-VIdeoCaptureExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VIdeoCaptureExample.release.xcconfig"; sourceTree = "<group>"; };
 		8EB4C7FAB31D1F3DC827F584CA593D30 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		90DEFB5397847E5FBF84D7435AA431BC /* SDiOSVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDiOSVersion.m; path = SDVersion/SDiOSVersion/SDiOSVersion.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9AFFB0118E6857C9221E546B60C76E22 /* PBJVision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVision.m; path = Source/PBJVision.m; sourceTree = "<group>"; };
-		A01BCAF0DD3C4FE838B02704E624A03A /* DownPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DownPicker.bundle; path = DownPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		95BC02EB653E1D472AD1FB4906ECE693 /* PBJMediaWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJMediaWriter.m; path = Source/PBJMediaWriter.m; sourceTree = "<group>"; };
+		9AC6F73A3DF4AB8CC1358D6DB74A662A /* PBJVision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVision.h; path = Source/PBJVision.h; sourceTree = "<group>"; };
+		9FB1A570FAAA534655B6FC2C9C7B6EF4 /* SDiOSVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDiOSVersion.h; path = SDVersion/SDiOSVersion/SDiOSVersion.h; sourceTree = "<group>"; };
+		A05E21293B506924E1FBF12EC715F639 /* DownPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DownPicker.xcconfig; sourceTree = "<group>"; };
 		ACB6C41A9EBDE44B6AFC8031B3285D2A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
 		AE282830D057944F337BC987DE2B60C3 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		B955ADCBC8DE97619D31C82F439969F9 /* UIDownPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIDownPicker.h; path = Pod/Classes/UIDownPicker.h; sourceTree = "<group>"; };
+		B979AA59E27CB0167C837E285A0675E2 /* PBJVision-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PBJVision-prefix.pch"; sourceTree = "<group>"; };
 		BBF17039E58193104BDAC3082966C645 /* Pods-VIdeoCaptureExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VIdeoCaptureExample-resources.sh"; sourceTree = "<group>"; };
+		BBF8E8330C4233B3B1EB2D7BBE8865FB /* PBJVisionUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVisionUtilities.h; path = Source/PBJVisionUtilities.h; sourceTree = "<group>"; };
+		BC3BBC430B7836D21FC668314C98017E /* PBJGLProgram.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJGLProgram.h; path = Source/PBJGLProgram.h; sourceTree = "<group>"; };
+		BD5D44E10B3B0C9789DB3066E314556F /* DownPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DownPicker-dummy.m"; sourceTree = "<group>"; };
+		BFAD6447C3F07FCBED9C07D811D9A6C4 /* SDVersion-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDVersion-dummy.m"; sourceTree = "<group>"; };
+		C24656CFF2718498C1BC68C700F5853A /* PBJVision.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PBJVision.xcconfig; sourceTree = "<group>"; };
 		C30DEF27AC2C590D2ED2BC3E1A1EE512 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		C49D07AFCC6FDE97F68748446CC0BD7F /* DownPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DownPicker-prefix.pch"; sourceTree = "<group>"; };
-		C9F95FDEAFEDDFADD8790135983A5C47 /* downArrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "downArrow@3x.png"; path = "Pod/Assets/downArrow@3x.png"; sourceTree = "<group>"; };
-		CF0292C4E54BF3591C0A24F95ACAB485 /* PBJVisionUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVisionUtilities.m; path = Source/PBJVisionUtilities.m; sourceTree = "<group>"; };
-		D269827EDACD9BFFCCC1CBAC8BCCBB2C /* DownPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DownPicker-dummy.m"; sourceTree = "<group>"; };
-		DA4F085E92CB0AED9400429F14088ADD /* PBJVision-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PBJVision-dummy.m"; sourceTree = "<group>"; };
+		C8E9ACEC71A44C645B7334C915948641 /* libDownPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libDownPicker.a; path = libDownPicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA7201D6D3F1CCD21952C4DCC9E28E1 /* PBJVision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBJVision.m; path = Source/PBJVision.m; sourceTree = "<group>"; };
+		CED4898AA024DAB9C94E4A165F63524F /* DownPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DownPicker-prefix.pch"; sourceTree = "<group>"; };
+		D157BDF7DF9D4ABDBA9151C6FE4050C8 /* ResourceBundle-DownPicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-DownPicker-Info.plist"; sourceTree = "<group>"; };
 		DCE5C5DA285EBBC015E5A0E149938273 /* Pods-VIdeoCaptureExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VIdeoCaptureExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DD064E751A7BE86AC36618879BCA52A7 /* DownPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DownPicker.bundle; path = DownPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF036BF32951C528559FB5A40E2EECD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		DFDB6D0EDE1E7BAD7AE8BF0991FE7941 /* PBJVision.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PBJVision.xcconfig; sourceTree = "<group>"; };
 		E5CCEC0F4E117BC34950537ADFCEB7A9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
-		EDA48DF1888EDFA8E8D03BB3FFB1A5EB /* PBJVision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PBJVision.h; path = Source/PBJVision.h; sourceTree = "<group>"; };
-		EDA4F76CE1A08581F4D66B58BD44EAB5 /* UIDownPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIDownPicker.h; path = Pod/Classes/UIDownPicker.h; sourceTree = "<group>"; };
+		EABB78BF0D0BEA02921EAF0407DC2D51 /* downArrow@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "downArrow@3x.png"; path = "Pod/Assets/downArrow@3x.png"; sourceTree = "<group>"; };
+		F5CCF6CB2C4A0BAF4C6F2413CE7D4E27 /* SDVersion-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDVersion-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +141,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		072CA5605F8947EEEE5D18F107BACDF9 /* Frameworks */ = {
+		30D193675B83833775EF97E7EEE3D420 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20F6CDDD471E4527C6018BADB134549D /* Foundation.framework in Frameworks */,
+				BBA70533A6398F16048FEE0C6132EAF4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +154,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CC494ECC816E3E02DCD1DD10E20490 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53F3441938E022991F29B9B8F1282E76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB3A75F49D4CDB2D5F2A72557D310B3D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,34 +186,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		030F876EF2A1502C2419C4E9014C21EC /* Resources */ = {
+		0B3272974CE39D8A9C3982E012F009C8 /* PBJVision */ = {
 			isa = PBXGroup;
 			children = (
-				6D198776B7655D17A54E758F7BD37AC7 /* Shader.fsh */,
-				076C8F9872AABD8BBDC1FE12F8123158 /* Shader.vsh */,
+				BC3BBC430B7836D21FC668314C98017E /* PBJGLProgram.h */,
+				3CB004F7BEA66F55907800F6E487C70A /* PBJGLProgram.m */,
+				7B9266B06384212CD43CD57C45840698 /* PBJMediaWriter.h */,
+				95BC02EB653E1D472AD1FB4906ECE693 /* PBJMediaWriter.m */,
+				9AC6F73A3DF4AB8CC1358D6DB74A662A /* PBJVision.h */,
+				CEA7201D6D3F1CCD21952C4DCC9E28E1 /* PBJVision.m */,
+				BBF8E8330C4233B3B1EB2D7BBE8865FB /* PBJVisionUtilities.h */,
+				7E3E198A2870BAE89975C09AE403726D /* PBJVisionUtilities.m */,
+				A5CF3F0EA14034E8109807AE52F01500 /* Resources */,
+				FADD111941356F1BB335538738E070A9 /* Support Files */,
 			);
-			name = Resources;
+			name = PBJVision;
+			path = PBJVision;
 			sourceTree = "<group>";
 		};
-		21256A7E7E6E6652171021464B827BBA /* Products */ = {
+		2543294E98E3B36D16BF60B4355916CD /* DownPicker */ = {
 			isa = PBXGroup;
 			children = (
-				A01BCAF0DD3C4FE838B02704E624A03A /* DownPicker.bundle */,
-				7D491F9007D7E7A7BE422C2C9EA462A1 /* libDownPicker.a */,
-				36180EC9B850E37F980994A16F902615 /* libPBJVision.a */,
-				55BCB37397FC1DF66D0284DBD237A8A4 /* libPods-VIdeoCaptureExample.a */,
+				61222CBF050DE621B1F09BB279A2E012 /* DownPicker.h */,
+				00E3120E97640D390B70C5E2623F42FD /* DownPicker.m */,
+				B955ADCBC8DE97619D31C82F439969F9 /* UIDownPicker.h */,
+				8D659BC1630CFD76267B0C9E65127988 /* UIDownPicker.m */,
+				709F9777DCF7081121C397133B57B4FE /* Resources */,
+				D13431117429FD5448D7F34407C57CF8 /* Support Files */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		35F6551307C2765AD77C5316A3C1C698 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				264D05276C6F61A2E2CBF4E2109255A5 /* downArrow.png */,
-				28B9FD8BF927CFA0D05A94E9E27C241B /* downArrow@2x.png */,
-				C9F95FDEAFEDDFADD8790135983A5C47 /* downArrow@3x.png */,
-			);
-			name = Resources;
+			name = DownPicker;
+			path = DownPicker;
 			sourceTree = "<group>";
 		};
 		40B815B91FA4EBAB2CCD5F1417FEB8FF /* Targets Support Files */ = {
@@ -197,24 +226,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		61C3D191DCCD3478FE358CDC9067A2C1 /* Pods */ = {
+		709F9777DCF7081121C397133B57B4FE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CE87461D9F114A8755D09E36A92BDB3D /* DownPicker */,
-				AC924D6B76FB3741395A3B18FE0B6227 /* PBJVision */,
+				5DAA5AFDF58F435FCE50B03436D501DF /* downArrow.png */,
+				28CC73BA427D76B1BD14F9C137A5A950 /* downArrow@2x.png */,
+				EABB78BF0D0BEA02921EAF0407DC2D51 /* downArrow@3x.png */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		66A80D044AB296F386B4FBA41706B032 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DFDB6D0EDE1E7BAD7AE8BF0991FE7941 /* PBJVision.xcconfig */,
-				DA4F085E92CB0AED9400429F14088ADD /* PBJVision-dummy.m */,
-				88EBA9297582C94D6495E4F47B9D9E78 /* PBJVision-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PBJVision";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -222,8 +241,8 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				EB57DDB3388FBC701046A1E93218737F /* Frameworks */,
-				61C3D191DCCD3478FE358CDC9067A2C1 /* Pods */,
-				21256A7E7E6E6652171021464B827BBA /* Products */,
+				83A940B141775E20DAF8BA1BB9140A79 /* Pods */,
+				D6C03B21E293F20F2EA28C165803252F /* Products */,
 				40B815B91FA4EBAB2CCD5F1417FEB8FF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -246,48 +265,58 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		A9E8A67230DCA7045E7220238E560B4B /* Support Files */ = {
+		83A940B141775E20DAF8BA1BB9140A79 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				22A706692E8DD9C4701AAB53196A0B8A /* DownPicker.xcconfig */,
-				D269827EDACD9BFFCCC1CBAC8BCCBB2C /* DownPicker-dummy.m */,
-				C49D07AFCC6FDE97F68748446CC0BD7F /* DownPicker-prefix.pch */,
-				85A91A112CC3320855C55A69952CC677 /* ResourceBundle-DownPicker-Info.plist */,
+				2543294E98E3B36D16BF60B4355916CD /* DownPicker */,
+				0B3272974CE39D8A9C3982E012F009C8 /* PBJVision */,
+				A00248E11C199282CAC07A7DD50D10D2 /* SDVersion */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A00248E11C199282CAC07A7DD50D10D2 /* SDVersion */ = {
+			isa = PBXGroup;
+			children = (
+				9FB1A570FAAA534655B6FC2C9C7B6EF4 /* SDiOSVersion.h */,
+				90DEFB5397847E5FBF84D7435AA431BC /* SDiOSVersion.m */,
+				2EDC5178716CA1B8A8AAD8B97EBE981F /* SDVersion.h */,
+				A1E2A45270DC0BD98FC14B3930B37325 /* Support Files */,
+			);
+			name = SDVersion;
+			path = SDVersion;
+			sourceTree = "<group>";
+		};
+		A1E2A45270DC0BD98FC14B3930B37325 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				40D4249D41BC3AEC8DD22F13C3600D5E /* SDVersion.xcconfig */,
+				BFAD6447C3F07FCBED9C07D811D9A6C4 /* SDVersion-dummy.m */,
+				F5CCF6CB2C4A0BAF4C6F2413CE7D4E27 /* SDVersion-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDVersion";
+			sourceTree = "<group>";
+		};
+		A5CF3F0EA14034E8109807AE52F01500 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3172092DF4046C48130571B79FB65F09 /* Shader.fsh */,
+				517F42C121B79ABD86C15849F1BF9EF4 /* Shader.vsh */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D13431117429FD5448D7F34407C57CF8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A05E21293B506924E1FBF12EC715F639 /* DownPicker.xcconfig */,
+				BD5D44E10B3B0C9789DB3066E314556F /* DownPicker-dummy.m */,
+				CED4898AA024DAB9C94E4A165F63524F /* DownPicker-prefix.pch */,
+				D157BDF7DF9D4ABDBA9151C6FE4050C8 /* ResourceBundle-DownPicker-Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DownPicker";
-			sourceTree = "<group>";
-		};
-		AC924D6B76FB3741395A3B18FE0B6227 /* PBJVision */ = {
-			isa = PBXGroup;
-			children = (
-				3F2C41D76DF23581891A60C2CF34D619 /* PBJGLProgram.h */,
-				78699F284104F74007A9624E22FBA962 /* PBJGLProgram.m */,
-				584B60F1200736D5E1A1D90408F3DD75 /* PBJMediaWriter.h */,
-				66071D9700BAA045AF5537559EF08DA7 /* PBJMediaWriter.m */,
-				EDA48DF1888EDFA8E8D03BB3FFB1A5EB /* PBJVision.h */,
-				9AFFB0118E6857C9221E546B60C76E22 /* PBJVision.m */,
-				4BBD4F8E614EAA7FA0D1C560E8DA00D9 /* PBJVisionUtilities.h */,
-				CF0292C4E54BF3591C0A24F95ACAB485 /* PBJVisionUtilities.m */,
-				030F876EF2A1502C2419C4E9014C21EC /* Resources */,
-				66A80D044AB296F386B4FBA41706B032 /* Support Files */,
-			);
-			name = PBJVision;
-			path = PBJVision;
-			sourceTree = "<group>";
-		};
-		CE87461D9F114A8755D09E36A92BDB3D /* DownPicker */ = {
-			isa = PBXGroup;
-			children = (
-				34B0B8FFE0ED9686790D8A942B8A32A5 /* DownPicker.h */,
-				1DE65CEDC9CD1D7ED4D50BD93AB14D48 /* DownPicker.m */,
-				EDA4F76CE1A08581F4D66B58BD44EAB5 /* UIDownPicker.h */,
-				0B9A4D19CE107BFD6B874A603375E2B6 /* UIDownPicker.m */,
-				35F6551307C2765AD77C5316A3C1C698 /* Resources */,
-				A9E8A67230DCA7045E7220238E560B4B /* Support Files */,
-			);
-			name = DownPicker;
-			path = DownPicker;
 			sourceTree = "<group>";
 		};
 		D34CC71CA9DA18E25377A5783D24ACE2 /* Pods-VIdeoCaptureExample */ = {
@@ -305,6 +334,18 @@
 			path = "Target Support Files/Pods-VIdeoCaptureExample";
 			sourceTree = "<group>";
 		};
+		D6C03B21E293F20F2EA28C165803252F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD064E751A7BE86AC36618879BCA52A7 /* DownPicker.bundle */,
+				C8E9ACEC71A44C645B7334C915948641 /* libDownPicker.a */,
+				2A6DBB8F20ED07D1E2E743B0F70AC5F8 /* libPBJVision.a */,
+				1EC2EE4E8012F254093B91CB0574A99E /* libPods-VIdeoCaptureExample.a */,
+				5658EF0449ACABCBFF2EBE0FEEC2D496 /* libSDVersion.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EB57DDB3388FBC701046A1E93218737F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,9 +354,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FADD111941356F1BB335538738E070A9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C24656CFF2718498C1BC68C700F5853A /* PBJVision.xcconfig */,
+				7BBED61BD51ACF8BBFEBF79B6C5D51D9 /* PBJVision-dummy.m */,
+				B979AA59E27CB0167C837E285A0675E2 /* PBJVision-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PBJVision";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		085DFBD9C1173243E875517D98A7283D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2979D623DBD408D8DEBE12A5BCD1592D /* SDiOSVersion.h in Headers */,
+				6DEDC303DA6089AD77DEB7D73D2C60C9 /* SDVersion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1692AEA63EC3326A597DF94974771621 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,25 +414,26 @@
 			);
 			name = "DownPicker-DownPicker";
 			productName = "DownPicker-DownPicker";
-			productReference = A01BCAF0DD3C4FE838B02704E624A03A /* DownPicker.bundle */;
+			productReference = DD064E751A7BE86AC36618879BCA52A7 /* DownPicker.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		4A8F825C4333EE27133F6B35151BA173 /* Pods-VIdeoCaptureExample */ = {
+		61AD69E1135A63ED91217EE6797EB804 /* Pods-VIdeoCaptureExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F859F31624B57EF96E3CBD5A59125943 /* Build configuration list for PBXNativeTarget "Pods-VIdeoCaptureExample" */;
+			buildConfigurationList = E3FDAD7DB7EF1526907FA23677F682B8 /* Build configuration list for PBXNativeTarget "Pods-VIdeoCaptureExample" */;
 			buildPhases = (
-				AC77F44054457B96D76F8B6A291BE28B /* Sources */,
-				072CA5605F8947EEEE5D18F107BACDF9 /* Frameworks */,
+				ED349333A499964ED88C06581578C789 /* Sources */,
+				53F3441938E022991F29B9B8F1282E76 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				14A6B4988CE213C0F78A21BAA32D14F2 /* PBXTargetDependency */,
-				13F1C73E9E05B1306FCEF17B71B5FF97 /* PBXTargetDependency */,
+				EA556EEAB237145C02F8C404DBE3559E /* PBXTargetDependency */,
+				35F344C0D0B999720105913EFDC2EF9A /* PBXTargetDependency */,
+				2ECC113F0FF76D1377859996E5B5D9B5 /* PBXTargetDependency */,
 			);
 			name = "Pods-VIdeoCaptureExample";
 			productName = "Pods-VIdeoCaptureExample";
-			productReference = 55BCB37397FC1DF66D0284DBD237A8A4 /* libPods-VIdeoCaptureExample.a */;
+			productReference = 1EC2EE4E8012F254093B91CB0574A99E /* libPods-VIdeoCaptureExample.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9508706C8EF63016A651AC34EF4BD23C /* PBJVision */ = {
@@ -388,7 +450,7 @@
 			);
 			name = PBJVision;
 			productName = PBJVision;
-			productReference = 36180EC9B850E37F980994A16F902615 /* libPBJVision.a */;
+			productReference = 2A6DBB8F20ED07D1E2E743B0F70AC5F8 /* libPBJVision.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9DD9921D25EA0C0991BA20E93823D620 /* DownPicker */ = {
@@ -406,7 +468,24 @@
 			);
 			name = DownPicker;
 			productName = DownPicker;
-			productReference = 7D491F9007D7E7A7BE422C2C9EA462A1 /* libDownPicker.a */;
+			productReference = C8E9ACEC71A44C645B7334C915948641 /* libDownPicker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C437532B120C2D49DE73C0DAA84307FF /* SDVersion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B624D5E3F25AF04A9F32A3C68BE6E2E /* Build configuration list for PBXNativeTarget "SDVersion" */;
+			buildPhases = (
+				4DFCFB91521DA0A97A032E14F0FFA428 /* Sources */,
+				30D193675B83833775EF97E7EEE3D420 /* Frameworks */,
+				085DFBD9C1173243E875517D98A7283D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDVersion;
+			productName = SDVersion;
+			productReference = 5658EF0449ACABCBFF2EBE0FEEC2D496 /* libSDVersion.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -426,14 +505,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 21256A7E7E6E6652171021464B827BBA /* Products */;
+			productRefGroup = D6C03B21E293F20F2EA28C165803252F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9DD9921D25EA0C0991BA20E93823D620 /* DownPicker */,
 				48AE03F598A6109CB2827ACB2BDF1F65 /* DownPicker-DownPicker */,
 				9508706C8EF63016A651AC34EF4BD23C /* PBJVision */,
-				4A8F825C4333EE27133F6B35151BA173 /* Pods-VIdeoCaptureExample */,
+				61AD69E1135A63ED91217EE6797EB804 /* Pods-VIdeoCaptureExample */,
+				C437532B120C2D49DE73C0DAA84307FF /* SDVersion */,
 			);
 		};
 /* End PBXProject section */
@@ -471,11 +551,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC77F44054457B96D76F8B6A291BE28B /* Sources */ = {
+		4DFCFB91521DA0A97A032E14F0FFA428 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C7E44EB214096CFE92F11F8C91029F /* Pods-VIdeoCaptureExample-dummy.m in Sources */,
+				5898964E2B5A62BB3706E922F312D15D /* SDiOSVersion.m in Sources */,
+				0BC282F69674AF0FAB2EFB07FE20AE45 /* SDVersion-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,20 +570,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED349333A499964ED88C06581578C789 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A49CF694B93134CC8CCA601A5E90B5DD /* Pods-VIdeoCaptureExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		13F1C73E9E05B1306FCEF17B71B5FF97 /* PBXTargetDependency */ = {
+		2ECC113F0FF76D1377859996E5B5D9B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDVersion;
+			target = C437532B120C2D49DE73C0DAA84307FF /* SDVersion */;
+			targetProxy = 91A7853FCEA7010D82A9226BDBD27955 /* PBXContainerItemProxy */;
+		};
+		35F344C0D0B999720105913EFDC2EF9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PBJVision;
 			target = 9508706C8EF63016A651AC34EF4BD23C /* PBJVision */;
-			targetProxy = B755182851A37EFE2BFD94B1DC857DF5 /* PBXContainerItemProxy */;
-		};
-		14A6B4988CE213C0F78A21BAA32D14F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DownPicker;
-			target = 9DD9921D25EA0C0991BA20E93823D620 /* DownPicker */;
-			targetProxy = B59F0313F4FA1655F2BBF836A1649720 /* PBXContainerItemProxy */;
+			targetProxy = 4262B19C564FEF7387B436284A5AD2F7 /* PBXContainerItemProxy */;
 		};
 		6B6EE3BEB6E89D57CE2D28FC8FFBA257 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -510,12 +599,18 @@
 			target = 48AE03F598A6109CB2827ACB2BDF1F65 /* DownPicker-DownPicker */;
 			targetProxy = B03FEF97E39F0BD7619626AFE8A7EE93 /* PBXContainerItemProxy */;
 		};
+		EA556EEAB237145C02F8C404DBE3559E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DownPicker;
+			target = 9DD9921D25EA0C0991BA20E93823D620 /* DownPicker */;
+			targetProxy = 0B26AB0AF030C6DDB7462F31DA00413F /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		04CEE8AADBDCD3E794E5CD066D83225A /* Debug */ = {
+		0F7024873C3CAE1543CCD4010CE2C6CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 846C7C3B3888573C827D33453FA5C529 /* Pods-VIdeoCaptureExample.debug.xcconfig */;
+			baseConfigurationReference = 40D4249D41BC3AEC8DD22F13C3600D5E /* SDVersion.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -523,9 +618,32 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDVersion/SDVersion-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		44CB9A0934A59EE5E7976F68A7C7F38F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E50E5BD8A46C8C4FBB31FE11BBE4880 /* Pods-VIdeoCaptureExample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -534,11 +652,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		48A49F21C167229E066DE3E39EC2E27D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFDB6D0EDE1E7BAD7AE8BF0991FE7941 /* PBJVision.xcconfig */;
+			baseConfigurationReference = C24656CFF2718498C1BC68C700F5853A /* PBJVision.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -605,7 +723,7 @@
 		};
 		61826258027670AEE86C98B4E3C4D997 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22A706692E8DD9C4701AAB53196A0B8A /* DownPicker.xcconfig */;
+			baseConfigurationReference = A05E21293B506924E1FBF12EC715F639 /* DownPicker.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -626,9 +744,9 @@
 			};
 			name = Debug;
 		};
-		AC592316CF0D65112B7C31CEF2598A5B /* Release */ = {
+		8A5482F75E3B41AA93F41331B32B75A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E50E5BD8A46C8C4FBB31FE11BBE4880 /* Pods-VIdeoCaptureExample.release.xcconfig */;
+			baseConfigurationReference = 40D4249D41BC3AEC8DD22F13C3600D5E /* SDVersion.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -636,14 +754,14 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/SDVersion/SDVersion-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -691,7 +809,7 @@
 		};
 		BD98A792A11D217AB0C33AC654789EE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22A706692E8DD9C4701AAB53196A0B8A /* DownPicker.xcconfig */;
+			baseConfigurationReference = A05E21293B506924E1FBF12EC715F639 /* DownPicker.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/DownPicker";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -708,7 +826,7 @@
 		};
 		D5D1D325AEA35509B29642C26A264FFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22A706692E8DD9C4701AAB53196A0B8A /* DownPicker.xcconfig */;
+			baseConfigurationReference = A05E21293B506924E1FBF12EC715F639 /* DownPicker.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -731,7 +849,7 @@
 		};
 		DFCF84940A4EF5C3300FD1BE90B80F4C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22A706692E8DD9C4701AAB53196A0B8A /* DownPicker.xcconfig */;
+			baseConfigurationReference = A05E21293B506924E1FBF12EC715F639 /* DownPicker.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/DownPicker";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -748,7 +866,7 @@
 		};
 		E004F4D5BAFD623F4E84CC84E76E0D00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFDB6D0EDE1E7BAD7AE8BF0991FE7941 /* PBJVision.xcconfig */;
+			baseConfigurationReference = C24656CFF2718498C1BC68C700F5853A /* PBJVision.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -764,6 +882,29 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F4E7075865B2F99635E8D4898E20B381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 846C7C3B3888573C827D33453FA5C529 /* Pods-VIdeoCaptureExample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -808,11 +949,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F859F31624B57EF96E3CBD5A59125943 /* Build configuration list for PBXNativeTarget "Pods-VIdeoCaptureExample" */ = {
+		8B624D5E3F25AF04A9F32A3C68BE6E2E /* Build configuration list for PBXNativeTarget "SDVersion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04CEE8AADBDCD3E794E5CD066D83225A /* Debug */,
-				AC592316CF0D65112B7C31CEF2598A5B /* Release */,
+				0F7024873C3CAE1543CCD4010CE2C6CE /* Debug */,
+				8A5482F75E3B41AA93F41331B32B75A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3FDAD7DB7EF1526907FA23677F682B8 /* Build configuration list for PBXNativeTarget "Pods-VIdeoCaptureExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4E7075865B2F99635E8D4898E20B381 /* Debug */,
+				44CB9A0934A59EE5E7976F68A7C7F38F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -17,14 +17,14 @@
 #import <Photos/PHAssetChangeRequest.h>
 #import <Photos/PHAssetCollectionChangeRequest.h>
 #import <Photos/PHAssetCreationRequest.h>
-
+#import "SDVersion.h"
 #import "DownPicker.h"
 
 
 #define RECODRING_TIMER             1.0
 #define RECODRING_TIME_LIMIT        10.0
-#define kHigh           @"High (1280x720)"
-#define kMedium         @"Medium (480x360)"
+#define kHigh           @"High(1280x720)"
+#define kMedium         @"Medium(480x360)"
 #define k640x480        @"640x480"
 
 
@@ -172,8 +172,8 @@
     NSLog(@"\n----------\n\n");
 
     
-    quality = AVCaptureSessionPresetHigh;
-    //frameRate = 30;
+    quality = kHigh;
+    frameRate = 30;
 }
 
 
@@ -196,30 +196,21 @@
     NSLog(@"Quality:%@", vision.captureSessionPreset);
     NSLog(@"\n----------\n");
 
-
-    
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-        // Request creating an asset from the image.
         
+        //PHAssetChangeRequest *createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL URLWithString:videoPath]];
         
+        NSString* fileName = [NSString stringWithFormat:@"%@-%@-%dfps.m4v", DeviceVersionNames[[SDVersion deviceVersion]], quality, vision.videoFrameRate];
         
-        PHAssetChangeRequest *createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL URLWithString:videoPath]];
+        NSLog(@"File Name:%@", fileName);
+
+        NSURL *url = [NSURL URLWithString:videoPath];
+        PHAssetResourceType assetType = PHAssetResourceTypeVideo;
+        PHAssetCreationRequest *request = [PHAssetCreationRequest creationRequestForAsset];
+        PHAssetResourceCreationOptions *creationOptions = [PHAssetResourceCreationOptions new];
+        creationOptions.originalFilename = fileName;
+        [request addResourceWithType:assetType fileURL:url options:creationOptions];
         
-        
-//        NSURL *url = [NSURL URLWithString:videoPath];
-//        PHAssetResourceType assetType = PHAssetResourceTypeVideo;
-//        PHAssetCreationRequest *request = [PHAssetCreationRequest creationRequestForAsset];
-//        PHAssetResourceCreationOptions *creationOptions = [PHAssetResourceCreationOptions new];
-//        creationOptions.originalFilename = @"iphone6plus/customname.m4v";
-//        [request addResourceWithType:assetType fileURL:url options:creationOptions];
-        
-        
-        
-//        // Request editing the album.
-//        PHAssetCollectionChangeRequest *albumChangeRequest = [PHAssetCollectionChangeRequest changeRequestForAssetCollection:<#(nonnull PHAssetCollection *)#>];
-//        // Get a placeholder for the new asset and add it to the album editing request.
-//        PHObjectPlaceholder *assetPlaceholder = [createAssetRequest placeholderForCreatedAsset];
-//        [albumChangeRequest addAssets:@[ assetPlaceholder ]];
         
     } completionHandler:^(BOOL success, NSError *error) {
         
@@ -228,7 +219,7 @@
             return;
         }
         
-        NSLog(@"Finished adding asset. %@", (success ? @"Success" : error));
+        NSLog(@"Finished adding asset.");
         [self showAlert:@"Video Recording" withMessage:@"Video has been captured, Please check Photos app."];
         [_vision freezePreview];
     }];
@@ -289,15 +280,15 @@
 
 - (IBAction)onStartRecording:(id)sender {
     
-    
-
     [[PBJVision sharedInstance] startVideoCapture];
     _lblRecordingDuration.text = @"00:00";
     [self startRecordingTimer];
 }
+
 - (IBAction)onStopRecodring:(id)sender {
     [self stopRecording];
 }
+
 #pragma mark - Picker
 
 
@@ -307,11 +298,10 @@
     if( !selectedValue || [selectedValue isEqualToString:@""])
         return;
     
-    quality = [dictResolution objectForKey:selectedValue];
-    vision.captureSessionPreset = quality;
+    quality = selectedValue;
+    vision.captureSessionPreset = [dictResolution objectForKey:selectedValue];
     vision.videoFrameRate = frameRate;
     [vision startPreview];
-    
 }
 
 
@@ -321,8 +311,8 @@
     if( !selectedValue || [selectedValue isEqualToString:@""])
         return;
     frameRate = [selectedValue intValue];
-    vision.captureSessionPreset = quality;
-    //vision.videoFrameRate = frameRate;
+    vision.videoFrameRate = frameRate;
+    vision.captureSessionPreset =  [dictResolution objectForKey:quality];
     [vision startPreview];
     
 }

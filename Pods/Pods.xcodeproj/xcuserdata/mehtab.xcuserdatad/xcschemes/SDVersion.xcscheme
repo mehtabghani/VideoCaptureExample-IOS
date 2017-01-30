@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '61AD69E1135A63ED91217EE6797EB804'
-               BlueprintName = 'Pods-VIdeoCaptureExample'
+               BlueprintIdentifier = 'C437532B120C2D49DE73C0DAA84307FF'
+               BlueprintName = 'SDVersion'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-VIdeoCaptureExample.a'>
+               BuildableName = 'libSDVersion.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -4,4 +4,5 @@
 target 'VIdeoCaptureExample' do
  pod 'PBJVision'
  pod 'DownPicker'
+ pod 'SDVersion'
 end

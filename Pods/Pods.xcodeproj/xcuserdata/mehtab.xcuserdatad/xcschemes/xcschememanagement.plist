@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDVersion.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -32,7 +37,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4A8F825C4333EE27133F6B35151BA173</key>
+		<key>61AD69E1135A63ED91217EE6797EB804</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>9DD9921D25EA0C0991BA20E93823D620</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C437532B120C2D49DE73C0DAA84307FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
