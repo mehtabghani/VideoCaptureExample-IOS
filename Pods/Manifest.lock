@@ -1,0 +1,15 @@
+PODS:
+  - DownPicker (0.1.34)
+  - PBJVision (0.5.1)
+
+DEPENDENCIES:
+  - DownPicker
+  - PBJVision
+
+SPEC CHECKSUMS:
+  DownPicker: c00ea63f08ae82116cc93d0eba74e86bf3d4c68e
+  PBJVision: 907b7281967e26b12610b80c3602f3a455911aa1
+
+PODFILE CHECKSUM: 9d6bd9c090f1d1792eb0c5cf35d65999d2f76071
+
+COCOAPODS: 1.1.1

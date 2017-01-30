@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>DownPicker-DownPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DownPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PBJVision.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-VIdeoCaptureExample.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>48AE03F598A6109CB2827ACB2BDF1F65</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4A8F825C4333EE27133F6B35151BA173</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9508706C8EF63016A651AC34EF4BD23C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DD9921D25EA0C0991BA20E93823D620</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
