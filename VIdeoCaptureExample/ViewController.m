@@ -22,7 +22,7 @@
 
 
 #define RECODRING_TIMER             1.0
-#define RECODRING_TIME_LIMIT        10.0
+#define RECODRING_TIME_LIMIT        6.0
 #define kHigh           @"High(1280x720)"
 #define kMedium         @"Medium(480x360)"
 #define k640x480        @"640x480"
@@ -32,7 +32,8 @@
 #define kFPS_20        @"20"
 #define kFPS_10        @"10"
 
-
+#define kDuration_5    @"5"
+#define kDuration_10   @"10"
 
 
 
@@ -47,18 +48,22 @@
     PBJVision *vision;
     NSString* quality;
     int frameRate;
+    int recordingDuartion;
 
     
 }
 
 @property (strong, nonatomic) DownPicker *qulaityDownPicker;
 @property (strong, nonatomic) DownPicker *fpsDownPicker;
+@property (strong, nonatomic) DownPicker *durationDownPicker;
+
 
 @property (weak, nonatomic) IBOutlet UIView *previewView;
 @property (weak, nonatomic) IBOutlet UILabel *lblRecordingDuration;
 
 @property (weak, nonatomic) IBOutlet UITextField *tfResolutions;
 @property (weak, nonatomic) IBOutlet UITextField *tfFPS;
+@property (weak, nonatomic) IBOutlet UITextField *tfDuration;
 
 @end
 
@@ -76,6 +81,7 @@
     
     [self initView];
     [self initDropDown];
+    recordingDuartion = kDuration_10;
     
 }
 
@@ -99,7 +105,6 @@
 }
 
 - (void) initDropDown {
-    // create the array of data
     NSMutableArray* qualityArray = [[NSMutableArray alloc] init];
     
     // add some sample data
@@ -119,7 +124,6 @@
     
     
     
-    // create the array of data
     NSMutableArray* fpsArray = [[NSMutableArray alloc] init];
     
     // add some sample data
@@ -137,11 +141,26 @@
     
     [self.fpsDownPicker setText:kFPS_30];
     
+    //
+    NSMutableArray* durationArray = [[NSMutableArray alloc] init];
+    
+    // add some sample data
+    [durationArray addObject:kDuration_5];
+    [durationArray addObject:kDuration_10];
+    
+    
+    // bind yourTextField to DownPicker
+    self.durationDownPicker = [[DownPicker alloc] initWithTextField:self.tfDuration withData:durationArray];
+    [self.durationDownPicker setPlaceholder:@"Select Duration"];
+    [self.durationDownPicker addTarget:self
+                           action:@selector(onDurationSelect:)
+                 forControlEvents:UIControlEventValueChanged];
+    
+    [self.durationDownPicker setText:kDuration_10];
     
 }
 
-- (void)viewDidLayoutSubviews
-{
+- (void)viewDidLayoutSubviews {
     _previewLayer.frame = _previewView.bounds;
 }
 
@@ -171,7 +190,6 @@
     NSLog(@"Quality:%@", vision.captureSessionPreset);
     NSLog(@"\n----------\n\n");
 
-    
     quality = kHigh;
     frameRate = 30;
 }
@@ -188,23 +206,32 @@
     }
     
     
+    
     NSString *videoPath = [videoDict  objectForKey:PBJVisionVideoPathKey];
+    NSURL *url = [NSURL URLWithString:videoPath];
+
     NSLog(@"\n----------\n");
     NSLog(@"-> Video Path:%@", videoPath);
     NSLog(@"Bit rate:%f", vision.videoBitRate);
-    NSLog(@"FPS rate:%ld", vision.videoFrameRate);
+    NSLog(@"FPS rate:%ld", (long)vision.videoFrameRate);
     NSLog(@"Quality:%@", vision.captureSessionPreset);
     NSLog(@"\n----------\n");
+    
+    [self saveVideo:_vision videoURL:url];
+    
+}
 
+
+- (void) saveVideo:(PBJVision *)_vision videoURL:(NSURL*) url {
+    
+    NSString* fileName = [NSString stringWithFormat:@"%@-%@-%ldfps.m4v", DeviceVersionNames[[SDVersion deviceVersion]], quality, (long)vision.videoFrameRate];
+    NSLog(@"File Name:%@", fileName);
+
+    
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
         
         //PHAssetChangeRequest *createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL URLWithString:videoPath]];
-        
-        NSString* fileName = [NSString stringWithFormat:@"%@-%@-%dfps.m4v", DeviceVersionNames[[SDVersion deviceVersion]], quality, vision.videoFrameRate];
-        
-        NSLog(@"File Name:%@", fileName);
-
-        NSURL *url = [NSURL URLWithString:videoPath];
+    
         PHAssetResourceType assetType = PHAssetResourceTypeVideo;
         PHAssetCreationRequest *request = [PHAssetCreationRequest creationRequestForAsset];
         PHAssetResourceCreationOptions *creationOptions = [PHAssetResourceCreationOptions new];
@@ -220,11 +247,13 @@
         }
         
         NSLog(@"Finished adding asset.");
-        [self showAlert:@"Video Recording" withMessage:@"Video has been captured, Please check Photos app."];
+        NSString* msg = [NSString stringWithFormat:@"%@ has been saved, Please check Photos app.", fileName];
+        [self showAlert:@"Video Recording" withMessage:msg];
         [_vision freezePreview];
     }];
 }
 
+#pragma mark - Alert Mehtod
 
 - (void) showAlert:(NSString*) title withMessage:(NSString*) msg {
 
@@ -238,14 +267,17 @@
                                 style:UIAlertActionStyleDefault
                                 handler:^(UIAlertAction * action) {
                                     //Handle your yes please button action here
+                                    [vision startPreview];
                                 }];
     
     [alert addAction:yesButton];
     
-    [self presentViewController:alert animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:alert animated:YES completion:nil];
+    });
+    
 
 }
-
 
 #pragma mark - Timer
 
@@ -260,7 +292,7 @@
 
 - (void) updateTime {
 
-    if(elapsedTime >= RECODRING_TIME_LIMIT ) {
+    if(elapsedTime >= recordingDuartion ) {
         [self stopRecording];
         return;
     }
@@ -279,7 +311,7 @@
 #pragma mark - IBAction
 
 - (IBAction)onStartRecording:(id)sender {
-    
+    //[vision startPreview];
     [[PBJVision sharedInstance] startVideoCapture];
     _lblRecordingDuration.text = @"00:00";
     [self startRecordingTimer];
@@ -291,7 +323,6 @@
 
 #pragma mark - Picker
 
-
 -(void) onQualitySelect:(id)dp {
     NSString* selectedValue = [self.qulaityDownPicker text];
     
@@ -301,9 +332,7 @@
     quality = selectedValue;
     vision.captureSessionPreset = [dictResolution objectForKey:selectedValue];
     vision.videoFrameRate = frameRate;
-    [vision startPreview];
 }
-
 
 -(void) onFPSSelect:(id)dp {
     NSString* selectedValue = [self.fpsDownPicker text];
@@ -311,10 +340,17 @@
     if( !selectedValue || [selectedValue isEqualToString:@""])
         return;
     frameRate = [selectedValue intValue];
+    //vision.captureSessionPreset =  [dictResolution objectForKey:quality];
     vision.videoFrameRate = frameRate;
-    vision.captureSessionPreset =  [dictResolution objectForKey:quality];
-    [vision startPreview];
+}
+
+-(void) onDurationSelect:(id)dp {
+    NSString* selectedValue = [self.durationDownPicker text];
     
+    if( !selectedValue || [selectedValue isEqualToString:@""])
+        return;
+    
+    recordingDuartion = [selectedValue intValue];
 }
 
 @end
