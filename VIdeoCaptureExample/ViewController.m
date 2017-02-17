@@ -64,10 +64,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfResolutions;
 @property (weak, nonatomic) IBOutlet UITextField *tfFPS;
 @property (weak, nonatomic) IBOutlet UITextField *tfDuration;
+@property (weak, nonatomic) IBOutlet UITextField *tfBitRate;
 
 @end
 
 @implementation ViewController
+
+#pragma mark - Application Events
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -81,7 +84,7 @@
     
     [self initView];
     [self initDropDown];
-    recordingDuartion = kDuration_10;
+    recordingDuartion = [kDuration_10 intValue];
     
 }
 
@@ -89,6 +92,9 @@
     [super viewWillAppear:animated];
     [self setupCamera];
 }
+
+
+#pragma mark - UI Setup
 
 
 - (void) initView {
@@ -101,6 +107,10 @@
     [_previewView.layer addSublayer:_previewLayer];
     
     _lblRecordingDuration.text = @"00:00";
+    
+    //[_tfBitRate becomeFirstResponder];
+    
+    [_tfBitRate setDelegate:self];
 
 }
 
@@ -194,6 +204,7 @@
     frameRate = 30;
 }
 
+#pragma mark - PBJVision Delegate
 
 - (void)vision:(PBJVision *)_vision capturedVideo:(NSDictionary *)videoDict error:(NSError *)error
 {
@@ -216,6 +227,8 @@
     NSLog(@"FPS rate:%ld", (long)vision.videoFrameRate);
     NSLog(@"Quality:%@", vision.captureSessionPreset);
     NSLog(@"\n----------\n");
+    
+    _lblRecordingDuration.text = @"00:00";
     
     [self saveVideo:_vision videoURL:url];
     
@@ -352,5 +365,22 @@
     
     recordingDuartion = [selectedValue intValue];
 }
+
+#pragma mark - UI TextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {            // called when 'return' key pressed. return NO to ignore.
+    
+    [textField resignFirstResponder];
+    
+    NSString *bitrate = textField.text;
+    
+    if([bitrate isEqualToString:@""])
+        return YES;
+    
+    [vision setVideoBitRate:[bitrate floatValue]];
+    
+    return YES;
+}
+
 
 @end
