@@ -22,7 +22,7 @@
 
 
 #define RECODRING_TIMER             1.0
-#define RECODRING_TIME_LIMIT        6.0
+#define RECODRING_TIME_LIMIT        11.0
 #define kHigh           @"High(1280x720)"
 #define kMedium         @"Medium(480x360)"
 #define k640x480        @"640x480"
@@ -33,6 +33,7 @@
 #define kFPS_10        @"10"
 
 #define kDuration_5    @"5"
+#define kDuration_8    @"8"
 #define kDuration_10   @"10"
 
 
@@ -156,6 +157,7 @@
     
     // add some sample data
     [durationArray addObject:kDuration_5];
+    [durationArray addObject:kDuration_8];
     [durationArray addObject:kDuration_10];
     
     
@@ -202,6 +204,7 @@
 
     quality = kHigh;
     frameRate = 30;
+    recordingDuartion = [kDuration_10 intValue];
 }
 
 #pragma mark - PBJVision Delegate
@@ -295,6 +298,7 @@
 #pragma mark - Timer
 
 - (void) startRecordingTimer {
+    
 
     elapsedTime = 0;
     _recordingTimer = [NSTimer scheduledTimerWithTimeInterval:RECODRING_TIMER target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
@@ -304,6 +308,7 @@
 
 
 - (void) updateTime {
+    
 
     if(elapsedTime >= recordingDuartion ) {
         [self stopRecording];
