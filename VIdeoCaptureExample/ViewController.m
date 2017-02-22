@@ -19,6 +19,8 @@
 #import <Photos/PHAssetCreationRequest.h>
 #import "SDVersion.h"
 #import "DownPicker.h"
+#import "PreviewImageViewController.h"
+#import "MGImageGenerator.h"
 
 
 #define RECODRING_TIMER             1.0
@@ -85,7 +87,7 @@
     
     [self initView];
     [self initDropDown];
-    recordingDuartion = [kDuration_10 intValue];
+    recordingDuartion = [kDuration_5 intValue];
     
 }
 
@@ -108,8 +110,6 @@
     [_previewView.layer addSublayer:_previewLayer];
     
     _lblRecordingDuration.text = @"00:00";
-    
-    //[_tfBitRate becomeFirstResponder];
     
     [_tfBitRate setDelegate:self];
 
@@ -168,7 +168,7 @@
                            action:@selector(onDurationSelect:)
                  forControlEvents:UIControlEventValueChanged];
     
-    [self.durationDownPicker setText:kDuration_10];
+    [self.durationDownPicker setText:kDuration_5];
     
 }
 
@@ -204,7 +204,7 @@
 
     quality = kHigh;
     frameRate = 30;
-    recordingDuartion = [kDuration_10 intValue];
+    recordingDuartion = [kDuration_5 intValue];
 }
 
 #pragma mark - PBJVision Delegate
@@ -222,7 +222,7 @@
     
     
     NSString *videoPath = [videoDict  objectForKey:PBJVisionVideoPathKey];
-    NSURL *url = [NSURL URLWithString:videoPath];
+    NSURL *url = [NSURL fileURLWithPath:videoPath];
 
     NSLog(@"\n----------\n");
     NSLog(@"-> Video Path:%@", videoPath);
@@ -233,7 +233,12 @@
     
     _lblRecordingDuration.text = @"00:00";
     
-    [self saveVideo:_vision videoURL:url];
+   //[self saveVideo:_vision videoURL:url];
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self generateImagesFromVideo:url];
+        
+    });
     
 }
 
@@ -242,6 +247,8 @@
     
     NSString* fileName = [NSString stringWithFormat:@"%@-%@-%ldfps.m4v", DeviceVersionNames[[SDVersion deviceVersion]], quality, (long)vision.videoFrameRate];
     NSLog(@"File Name:%@", fileName);
+    
+    __weak __typeof(self) weakSelf = self;
 
     
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
@@ -258,16 +265,55 @@
     } completionHandler:^(BOOL success, NSError *error) {
         
         if(error) {
-            [self showAlert:@"Error" withMessage:error.description];
+            [weakSelf showAlert:@"Error" withMessage:error.description];
             return;
         }
         
         NSLog(@"Finished adding asset.");
         NSString* msg = [NSString stringWithFormat:@"%@ has been saved, Please check Photos app.", fileName];
-        [self showAlert:@"Video Recording" withMessage:msg];
+       // [weakSelf showAlert:@"Video Recording" withMessage:msg];
         [_vision freezePreview];
     }];
 }
+
+
+- (void) generateImagesFromVideo:(NSURL*) url {
+
+    MGImageGenerator* imgGenerator = [MGImageGenerator new];
+   
+    /* for first frame */
+    //UIImage* img = [imgGenerator getImageFromVideo:url];
+   // NSArray* array = [NSArray arrayWithObjects:img, nil];
+    //[self showPreviewScreen:array];
+    
+    [imgGenerator getImagesFromVideos:url completionHandler:^(NSArray *result, NSError * _Nullable error) {
+       
+        if(error) {
+            NSLog(@"Error in image generation: %@", error);
+            return ;
+        }
+        
+        [self showPreviewScreen:result];
+        
+    }];
+}
+
+
+
+#pragma mark - Preview View Controller
+- (void) showPreviewScreen:(NSArray*) images {
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        PreviewImageViewController* previewController =  [self.storyboard instantiateViewControllerWithIdentifier:@"PreviewImageViewController"];
+        [previewController setImageArray:images];
+        [self.navigationController pushViewController:previewController animated:YES];
+    });
+  
+}
+
+
+
+#pragma mark - 
 
 #pragma mark - Alert Mehtod
 
@@ -310,7 +356,7 @@
 - (void) updateTime {
     
 
-    if(elapsedTime >= recordingDuartion ) {
+    if(elapsedTime >= recordingDuartion + 1 ) {
         [self stopRecording];
         return;
     }
@@ -321,9 +367,9 @@
 }
 
 - (void) stopRecording {
-    [[PBJVision sharedInstance] endVideoCapture];
     [_recordingTimer invalidate];
     _recordingTimer = nil;
+    [[PBJVision sharedInstance] endVideoCapture];
 }
 
 #pragma mark - IBAction
@@ -386,6 +432,17 @@
     
     return YES;
 }
+
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 @end
