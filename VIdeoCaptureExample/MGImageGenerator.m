@@ -71,10 +71,13 @@
     float increament =  (float)duration / (float)imageCount;
     int loopCount = 0;
     
-    for (Float64 i = 0; i < duration; i += 0.1) // e.g generate 5(duration in seconds)/50(frames)
+    for (Float64 i = 0; i < duration; i += increament) // e.g generate 5(duration in seconds)/50(frames)
     {
         loopCount++;
-        CGImageRef imageRef = [imageGenerator  copyCGImageAtTime:CMTimeMakeWithSeconds(i, 60) actualTime:&actualTime error:&error];
+        
+        //reference for timescale calculation http://stackoverflow.com/questions/4001755/trying-to-understand-cmtime-and-cmtimemake
+        
+        CGImageRef imageRef = [imageGenerator copyCGImageAtTime:CMTimeMakeWithSeconds(i, 600) actualTime:&actualTime error:&error];
         UIImage *image = [[UIImage alloc] initWithCGImage:imageRef];
         [imagesArray addObject:image];
         [MGImageGenerator saveImageToDocumentDirectory:image withName:[NSString stringWithFormat:@"MG_image_%d", loopCount]];

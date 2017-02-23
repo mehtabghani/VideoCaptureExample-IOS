@@ -240,8 +240,10 @@
     
     _lblRecordingDuration.text = @"00:00";
     
+    /* enable code if video is required to seen in Photos App */
    //[self saveVideo:_vision videoURL:url];
     
+    /* This code generate images and save it to Document Dir*/
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self generateImagesFromVideo:url];
         
@@ -249,7 +251,7 @@
     
 }
 
-
+#pragma mark - Save Video In Photos Dir
 - (void) saveVideo:(PBJVision *)_vision videoURL:(NSURL*) url {
     
     NSString* fileName = [NSString stringWithFormat:@"%@-%@-%ldfps.m4v", DeviceVersionNames[[SDVersion deviceVersion]], quality, (long)vision.videoFrameRate];
@@ -259,9 +261,7 @@
 
     
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-        
-        //PHAssetChangeRequest *createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:[NSURL URLWithString:videoPath]];
-    
+  
         PHAssetResourceType assetType = PHAssetResourceTypeVideo;
         PHAssetCreationRequest *request = [PHAssetCreationRequest creationRequestForAsset];
         PHAssetResourceCreationOptions *creationOptions = [PHAssetResourceCreationOptions new];
@@ -295,20 +295,19 @@
     //[self showPreviewScreen:array];
     
     
-    
     [MGImageGenerator getImagesFromVideos:url videoDurationSeconds:recordingDuartion numberOfImages:50 completionHandler:^(NSArray* result, NSError*  error) {
        
+        [self discardVideo:url];
+
         if(error) {
             NSLog(@"Error in image generation: %@", error);
             return ;
         }
         
         [self showPreviewScreen:result];
-        [self discardVideo:url];
+
     }];
 }
-
-
 
 #pragma mark - Preview View Controller
 - (void) showPreviewScreen:(NSArray*) images {
@@ -336,8 +335,6 @@
         NSLog(@"Error occurred in removing video: %@", error.description);
     
 }
-
-
 
 #pragma mark - 
 
