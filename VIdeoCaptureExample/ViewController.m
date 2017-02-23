@@ -176,6 +176,12 @@
     _previewLayer.frame = _previewView.bounds;
 }
 
+- (NSString*) getDocumentPathToSaveVideo {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0]; //Get the docs directory
+    return documentsPath;
+}
+
 - (void) setupCamera
 {
     //_longPressGestureRecognizer.enabled = YES;
@@ -189,9 +195,10 @@
     vision.audioCaptureEnabled = NO;
     vision.cameraDevice = PBJCameraDeviceFront;
     vision.maximumCaptureDuration = CMTimeMakeWithSeconds(15, 600); // ~ 15 seconds
-    //vision.videoBitRate = PBJVideoBitRate1920x1080;
+    vision.videoBitRate = 1500000;//PBJVideoBitRate1920x1080;
     vision.captureSessionPreset = AVCaptureSessionPresetHigh;
    // [vision setVideoFrameRate:30];
+    [vision setCaptureDirectory:[self getDocumentPathToSaveVideo]];
     
 
     [vision startPreview];
@@ -271,22 +278,25 @@
         
         NSLog(@"Finished adding asset.");
         NSString* msg = [NSString stringWithFormat:@"%@ has been saved, Please check Photos app.", fileName];
-       // [weakSelf showAlert:@"Video Recording" withMessage:msg];
+        [weakSelf showAlert:@"Video Recording" withMessage:msg];
         [_vision freezePreview];
     }];
 }
 
 
+#pragma mark - Generate Image Method
+
 - (void) generateImagesFromVideo:(NSURL*) url {
 
-    MGImageGenerator* imgGenerator = [MGImageGenerator new];
    
     /* for first frame */
-    //UIImage* img = [imgGenerator getImageFromVideo:url];
+    //UIImage* img = [MGImageGenerator getImageFromVideo:url];
    // NSArray* array = [NSArray arrayWithObjects:img, nil];
     //[self showPreviewScreen:array];
     
-    [imgGenerator getImagesFromVideos:url completionHandler:^(NSArray *result, NSError * _Nullable error) {
+    
+    
+    [MGImageGenerator getImagesFromVideos:url videoDurationSeconds:recordingDuartion numberOfImages:50 completionHandler:^(NSArray* result, NSError*  error) {
        
         if(error) {
             NSLog(@"Error in image generation: %@", error);
@@ -294,7 +304,7 @@
         }
         
         [self showPreviewScreen:result];
-        
+        [self discardVideo:url];
     }];
 }
 
@@ -309,6 +319,22 @@
         [self.navigationController pushViewController:previewController animated:YES];
     });
   
+}
+
+
+#pragma mark - CleanUp Methods 
+
+- (void) discardVideo:(NSURL*) url {
+
+    if(!url)
+        return;
+    
+    NSError *error = nil;
+    [[NSFileManager defaultManager] removeItemAtPath:[url relativePath] error:&error];
+
+    if(error)
+        NSLog(@"Error occurred in removing video: %@", error.description);
+    
 }
 
 

@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-typedef void (^MGImageGeneratorCompletionHandler)(NSArray* result, NSError * _Nullable error);
+typedef void (^MGImageGeneratorCompletionHandler)(NSArray* , NSError* );
 
 @interface MGImageGenerator : NSObject
 
--(UIImage*) getImageFromVideo:(NSURL*) videoPath;
-- (void) getImagesFromVideos:(NSURL*) videoPath completionHandler:(MGImageGeneratorCompletionHandler) handler;
++ (UIImage*) getImageFromVideo:(NSURL*) videoPath;
++ (void) getImagesFromVideos:(NSURL*) videoPath videoDurationSeconds:(int) duration numberOfImages:(int) imageCount completionHandler:(MGImageGeneratorCompletionHandler) handler;
 
 
 
